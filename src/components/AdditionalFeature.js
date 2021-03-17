@@ -8,7 +8,7 @@ const AdditionalFeature = props => {
   const handleAdder = () => {
     props.addFeature(props.feature)
   }
-  console.log(props.feature,'feature props')
+
   
   return (
     <li>

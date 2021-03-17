@@ -7,6 +7,7 @@ const AddedFeature = props => {
   const handleRemover = () => {
     props.removeFeature(props.feature)
   }
+  console.log(props.feature)
 
   return (
     <li>
