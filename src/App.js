@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
@@ -37,4 +38,24 @@ const App = () => {
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    car: {
+      price: state.car.price,
+      name: state.car.name,
+      image: state.car.image,
+      features: state.car.features,
+    },
+    additionalFeatures: [
+      state.additionalFeatures[0],
+      state.additionalFeatures[1],
+      state.additionalFeatures[2],
+      state.additionalFeatures[3],
+    ],
+    additionalPrice: state.additionalPrice
+  }
+}
+
+
+
+export default connect(mapStateToProps, {}) (App);
